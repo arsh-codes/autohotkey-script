@@ -100,3 +100,44 @@ CapsLock:: {
     }
     return
 }
+
+; Handle Ctrl + h/j/k/l for navigation mode
+^h:: {
+    global isNavigationMode
+    if isNavigationMode {
+        Send("^+{Left}")  ; Ctrl+Shift+Left
+    } else {
+        Send("^h")  ; Ctrl+h
+    }
+    return
+}
+
+^j:: {
+    global isNavigationMode
+    if isNavigationMode {
+        Send("^+{Down}")  ; Ctrl+Shift+Down
+    } else {
+        Send("^j")  ; Ctrl+j
+    }
+    return
+}
+
+^k:: {
+    global isNavigationMode
+    if isNavigationMode {
+        Send("^+{Up}")  ; Ctrl+Shift+Up
+    } else {
+        Send("^k")  ; Ctrl+k
+    }
+    return
+}
+
+^l:: {
+    global isNavigationMode
+    if isNavigationMode {
+        Send("^+{Right}")  ; Ctrl+Shift+Right
+    } else {
+        Send("^l")  ; Ctrl+l
+    }
+    return
+}
