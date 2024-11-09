@@ -1,4 +1,4 @@
-﻿#Requires AutoHotkey v2.0
+#Requires AutoHotkey v2.0
 #SingleInstance Force
 
 ; Toggle state variable
@@ -33,12 +33,16 @@ CapsLock:: {
     global isNavigationMode
     if isNavigationMode {
         if GetKeyState("Shift", "P") { ; Check if Shift is held down
-            Send("{Shift Down}{Left}{Shift Up}")
+            Send("+{Left}")
         } else {
             Send("{Left}")
         }
     } else {
-        Send("h")
+        if GetKeyState("Shift", "P") {
+            Send("H")
+        } else {
+            Send("h")
+        }
     }
     return
 }
@@ -47,12 +51,16 @@ CapsLock:: {
     global isNavigationMode
     if isNavigationMode {
         if GetKeyState("Shift", "P") { ; Check if Shift is held down
-            Send("{Shift Down}{Down}{Shift Up}")
+            Send("+{Down}")
         } else {
             Send("{Down}")
         }
     } else {
-        Send("j")
+        if GetKeyState("Shift", "P") {
+            Send("J")
+        } else {
+            Send("j")
+        }
     }
     return
 }
@@ -61,12 +69,16 @@ CapsLock:: {
     global isNavigationMode
     if isNavigationMode {
         if GetKeyState("Shift", "P") { ; Check if Shift is held down
-            Send("{Shift Down}{Up}{Shift Up}")
+            Send("+{Up}")
         } else {
             Send("{Up}")
         }
     } else {
-        Send("k")
+        if GetKeyState("Shift", "P") {
+            Send("K")
+        } else {
+            Send("k")
+        }
     }
     return
 }
@@ -75,12 +87,16 @@ CapsLock:: {
     global isNavigationMode
     if isNavigationMode {
         if GetKeyState("Shift", "P") { ; Check if Shift is held down
-            Send("{Shift Down}{Right}{Shift Up}")
+            Send("+{Right}")
         } else {
             Send("{Right}")
         }
     } else {
-        Send("l")
+        if GetKeyState("Shift", "P") {
+            Send("L")
+        } else {
+            Send("l")
+        }
     }
     return
 }
