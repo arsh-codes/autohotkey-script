@@ -1,55 +1,72 @@
-# Vim-like Navigation Mode Script (with `h`, `j`, `k`, `l` for Arrow Keys) – Available System-Wide
+# Vim-like Navigation Mode Script  
+**System-Wide Navigation with h, j, k, l (Inspired by Vim)**  
 
-This script maps the `h`, `j`, `k`, and `l` keys to the arrow keys throughout your entire system, just like in **Vim**, to help you build muscle memory for navigation without moving your hands away from the home row. Press `CapsLock` to toggle between normal typing and navigation mode, and use `Shift` to select text while moving the cursor.
-
-
-## Why `CapsLock` and `h`, `j`, `k`, `l`?
-- **Vim-inspired**: Just like in **Vim**, the `h`, `j`, `k`, and `l` keys are used for navigation, allowing you to move the cursor without reaching for the arrow keys. This helps you build muscle memory and navigate faster with your fingers always near the home row.
-- **CapsLock for Mode Switching**: The `CapsLock` key is used to toggle navigation mode because it's a less-used key, easily accessible for switching between typing and navigation without interrupting your workflow.
-- **Shift for Capitalization**: `Shift` retains its usual function for typing capital letters, ensuring a natural typing experience.
-- **No `Esc` Key**: Escape (Esc) is not used here because it's far from the home row, while `CapsLock` is a more convenient key to toggle modes.
-
-### Recommendation:
-- **Disable your arrow keys** to encourage using `h`, `j`, `k`, and `l` for all navigation tasks. This helps you develop Vim-like muscle memory for more efficient navigation.
-
-
-## Features:
-- **Vim-like Navigation (System-wide)**: Press `CapsLock` to toggle between normal mode and navigation mode.
-  - When navigation mode is on, `h`, `j`, `k`, and `l` act as arrow keys:
-    - `h` = Left arrow
-    - `j` = Down arrow
-    - `k` = Up arrow
-    - `l` = Right arrow
-  - Hold `Shift` with these keys to select text.
-- **Tooltips**: A tooltip will briefly show "Navigation Mode ON" or "Navigation Mode OFF" when toggled.
-- **Caps Lock Indicator**: The Caps Lock LED will indicate whether navigation mode is active.
-
-## Installation and Setup
-
-### Step 1: Install AutoHotkey
-To run this script, you’ll need AutoHotkey installed on your computer.
-
-1. Go to the [AutoHotkey website](https://www.autohotkey.com/) and download the installer.
-2. Run the installer and follow the prompts to install AutoHotkey on your computer.
-
-### Step 2: Save the Script
-1. Copy the script below into a text editor (like Notepad).
-2. Save the file with a `.ahk` extension, for example: `navigation_mode.ahk`.
-
-### Step 3: Run the Script
-1. After saving the file, double-click on the `.ahk` file you just created.
-2. AutoHotkey will run the script, and the script will start working immediately.
-3. You should see a new AutoHotkey icon in your system tray (near the clock), indicating the script is running.
-
-### Step 4: Using the Script
-- **Press `CapsLock`** to toggle between normal mode and navigation mode.
-  - When in **Navigation Mode**, use:
-    - `h` to move left
-    - `j` to move down
-    - `k` to move up
-    - `l` to move right
-  - **Hold `Shift`** to select text while moving.
+This script, written in **AutoHotkey v2**, maps the `h`, `j`, `k`, and `l` keys to the arrow keys throughout your entire system. It allows you to navigate like in Vim, helping you build muscle memory without moving your hands from the home row. Press the `CapsLock` key to toggle between normal typing and navigation modes.  
 
 ---
 
-**Note**: To stop the script, right-click the AutoHotkey icon in your system tray and select **Exit**.
+## **Core Features:**
+
+### 1. **Toggle Navigation Mode:**
+   - The **Caps Lock key** is used to toggle "navigation mode" on or off.
+   - When navigation mode is active:
+     - The **Caps Lock LED** on your keyboard serves as a visual indicator.
+     - A tooltip will briefly show "Navigation Mode ON" or "Navigation Mode OFF" for user feedback.
+
+### 2. **Navigation Mode:**
+   - **h**, **j**, **k**, and **l** are remapped to function like arrow keys:
+     - `h` -> Left Arrow  
+     - `j` -> Down Arrow  
+     - `k` -> Up Arrow  
+     - `l` -> Right Arrow  
+   - Holding **Shift** while using these keys allows text selection.
+   - Modifier key combinations are supported for extended functionality:
+     - **Ctrl + h/j/k/l** for larger movements or text selection.
+     - **Alt + h/j/k/l** for actions like Alt + Arrow keys.
+     - **Win + h/j/k/l** for actions like snapping windows (if supported by the OS).
+
+### 3. **Default Mode:**
+   - When navigation mode is off, the `h`, `j`, `k`, and `l` keys work normally.
+   - Modifier keys (Shift, Ctrl, Alt, or Win) work as expected for typing or other commands.
+
+---
+
+## **Why Use CapsLock and h, j, k, l?**  
+- **Vim-Inspired Navigation:**  
+  The `h`, `j`, `k`, and `l` keys mimic Vim's movement keys, allowing efficient navigation without reaching for the arrow keys.  
+- **CapsLock for Mode Switching:**  
+  The `CapsLock` key serves as a convenient toggle for switching between typing and navigation modes without disrupting your workflow.
+
+---
+
+
+## **Installation and Setup:**
+
+### Step 1: Install AutoHotkey
+   - Go to the [AutoHotkey website](https://www.autohotkey.com/) and download the installer.
+   - Follow the prompts to install AutoHotkey on your system.
+
+### Step 2: Save the Script
+   - Copy the script into a text editor (like Notepad).
+   - Save it with a `.ahk` extension (e.g., `navigation_mode.ahk`).
+
+### Step 3: Run the Script
+   - Double-click on the `.ahk` file you just created.
+   - The script will run immediately, and you should see an AutoHotkey icon in your system tray.
+
+### Step 4: Using the Script
+   - Press **CapsLock** to toggle between normal mode and navigation mode.
+   - In navigation mode, use the keys:
+     - `h` = Left, `j` = Down, `k` = Up, `l` = Right.
+   - Hold **Shift** with these keys to select text.
+   - Optionally, use **Ctrl**, **Alt**, or **Win** with these keys for additional navigation functionality.
+
+---
+
+### **Recommendation:**  
+Disable the arrow keys on your keyboard to encourage using `h`, `j`, `k`, and `l` for all navigation tasks. This helps you develop Vim-like muscle memory for faster and more efficient navigation.
+
+---
+
+### **Stopping the Script:**
+To stop the script, right-click the AutoHotkey icon in the system tray and select **Exit**.
