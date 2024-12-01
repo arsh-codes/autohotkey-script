@@ -141,3 +141,85 @@ CapsLock:: {
     }
     return
 }
+
+; Handle Alt + h/j/k/l for navigation mode
+!h:: {
+    global isNavigationMode
+    if isNavigationMode {
+        Send("!{Left}")  ; Alt+Left
+    } else {
+        Send("!h")  ; Alt+h
+    }
+    return
+}
+
+!j:: {
+    global isNavigationMode
+    if isNavigationMode {
+        Send("!{Down}")  ; Alt+Down
+    } else {
+        Send("!j")  ; Alt+j
+    }
+    return
+}
+
+!k:: {
+    global isNavigationMode
+    if isNavigationMode {
+        Send("!{Up}")  ; Alt+Up
+    } else {
+        Send("!k")  ; Alt+k
+    }
+    return
+}
+
+!l:: {
+    global isNavigationMode
+    if isNavigationMode {
+        Send("!{Right}")  ; Alt+Right
+    } else {
+        Send("!l")  ; Alt+l
+    }
+    return
+}
+
+; Handle Win (Start) + h/j/k/l for navigation mode
+#h:: {
+    global isNavigationMode
+    if isNavigationMode {
+        Send("#+{Left}")  ; Win+Left
+    } else {
+        Send("#h")  ; Win+h
+    }
+    return
+}
+
+#j:: {
+    global isNavigationMode
+    if isNavigationMode {
+        Send("#+{Down}")  ; Win+Down
+    } else {
+        Send("#j")  ; Win+j
+    }
+    return
+}
+
+#k:: {
+    global isNavigationMode
+    if isNavigationMode {
+        Send("#+{Up}")  ; Win+Up
+    } else {
+        Send("#k")  ; Win+k
+    }
+    return
+}
+
+#l:: {
+    global isNavigationMode
+    if isNavigationMode {
+        Send("#+{Right}")  ; Win+Right
+    } else {
+        Send("#l")  ; Win+l
+    }
+    return
+}
